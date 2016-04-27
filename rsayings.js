@@ -368,7 +368,10 @@ function getSaying() {
   return rSayings[Math.floor(Math.random() * rSayings.length)];
 }
 
+
+
 $(document).ready(function() {
+	$("#reload-link").click(function(){$("#rSaying").text(getSaying()+'!');});
   $("#rSaying").text(getSaying()+'!');
 
 })

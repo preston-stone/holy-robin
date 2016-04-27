@@ -1,6 +1,15 @@
 div#rSaying{
   font: bold 32px Verdana, Arial, sans-serif;
   display:block;
+  margin-top:2em;
+  width:100%;
+  text-align:center;
+}
+
+div#reload{
+  font: bold 11px Verdana, Arial, sans-serif;
+  margin-top:4em;
+  display:block;
   width:100%;
   text-align:center;
 }
