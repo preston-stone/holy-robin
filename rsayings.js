@@ -1,6 +1,6 @@
 
 function getWikiData() {
-  var wURL = 'http://en.wikipedia.org/w/api.php?format=json&action=query&titles=List_of_exclamations_by_Robin&prop=revisions&rvprop=content&rvsection=2&indexpageids&callback=?';
+  var wURL = 'https://en.wikipedia.org/w/api.php?format=json&action=query&titles=List_of_exclamations_by_Robin&prop=revisions&rvprop=content&rvsection=2&indexpageids&callback=?';
   
  $.getJSON(wURL ,function(data) {
     var hash = data;
