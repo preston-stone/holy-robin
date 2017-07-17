@@ -8,7 +8,6 @@ function getWikiData() {
      var content = data["query"]["pages"][pageid]["revisions"][0]["*"];
       getSaying(content);  
   });
-  
 }
 
 function getSaying(content){
