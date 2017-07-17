@@ -1,9 +1,9 @@
 <html>
 <head>
 	<title>What Would Robin Say?</title>
-	<link rel="stylesheet" href="rsayings.css"/>
+	<link rel="stylesheet" href="css/what-would-robin-say.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="rsayings.js"></script>
+	<script src="js/what-would-robin-say.js"></script>
 	
 </head>
 <body>
