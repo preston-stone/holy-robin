@@ -15,8 +15,6 @@ function getSaying(content) {
     }).filter(function(n) {
         return n != ""
     });
-
-    console.log(rSayings);
     var saying = rSayings[Math.floor(Math.random() * rSayings.length)].trim();
     $("#rSaying").html(saying + '!');
 }
