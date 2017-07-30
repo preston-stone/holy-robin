@@ -10,6 +10,7 @@ class App extends Component {
         this.state = {
             data: []
         }
+        this.reloadHandler = this.reloadHandler.bind(this);
     }
 
     componentDidMount() {
@@ -37,22 +38,30 @@ class App extends Component {
             })
     }
 
-    render() {
+    getSaying(){
       // grab a random saying
         var idx = Math.floor(Math.random() * this.state.data.length);
         if (idx > -1) {
-            var saying = this.state.data[idx];
+            this.saying = this.state.data[idx];
             // remove the saying once it's been displayed
             this.state.data.splice(idx, 1);
         } else {
             // fallback
-            saying = "Holy speechlessness! Robin has nothing more to say to you.";
+            this.saying = "Holy speechlessness! Robin has nothing more to say to you.";
         }
+    }
+
+    reloadHandler(){
+      this.forceUpdate();
+    }
+
+    render() {
+        this.getSaying();
         return ( 
           <div className = "App" >
             <div className = "App-header" >
-            <h2> {saying} </h2> </div> <p className = "App-intro" >
-            (Reload) </p> </div>
+            <h2> {this.saying} </h2> </div> <p className = "App-intro" >
+            <button onClick={this.reloadHandler}>Reload</button> </p> </div>
         );
     }
 }
