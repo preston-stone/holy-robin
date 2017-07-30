@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 80;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'src')));
 
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/public/index.html');
