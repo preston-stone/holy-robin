@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/index.js'
   ],
   module: {
     loaders: [
@@ -21,7 +21,7 @@ module.exports = {
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: './src',
     hot: true
   },
   plugins: [
