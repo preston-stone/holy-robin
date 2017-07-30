@@ -23,18 +23,18 @@ class App extends Component {
                 })
             })
             .then((res) => {
-                        // filter data to grab just the sayings
-                        var scontent = res.data['*'].split("{{div col|3}}").pop().split("{{div col end}}").shift();
-                        // turn Robin's pithy one-liners into an array
-                        var rSayings = scontent.split("*").map(function(idx) {
-                            return idx.trim()+'!';
-                        }).filter(function(n) {
-                            return n !== ""
-                        });
-                        // insert array into state
-                        this.setState({
-                            data: rSayings
-                        })
+                // filter data to grab just the sayings
+                var scontent = res.data['*'].split("{{div col|3}}").pop().split("{{div col end}}").shift();
+                // turn Robin's pithy one-liners into a clean array
+                var rSayings = scontent.split("*").map(function(idx) {
+                    return idx.trim().replace(/\s*\(.*?\)\s*/g, '')+'!';
+                }).filter(function(n) {
+                    return n !== ""
+                });
+                // insert array into state
+                this.setState({
+                    data: rSayings
+                })
             })
     }
 
