@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -8,14 +9,34 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #215b86;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #FFF200;
+  font-family: 'Bangers', cursive;
+  font-size:40px;
+  letter-spacing:0.1em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.reload {
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
+  background-color: white;
+  color:#215b86;
+  border: 0;
+  letter-spacing: 0.1em;
+  cursor:pointer;
+  border-top: 1px solid #215b86;
+  border-bottom: 1px solid #215b86;
+}
+
+.reload:hover{
+  background-color: #215b86;
+  color: #FFF200;
 }
 
 @keyframes App-logo-spin {

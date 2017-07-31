@@ -61,7 +61,7 @@ class App extends Component {
           <div className = "App" >
             <div className = "App-header" >
             <h2> {this.saying} </h2> </div> <p className = "App-intro" >
-            <button onClick={this.reloadHandler}>Reload</button> </p> </div>
+            <button className="reload" onClick={this.reloadHandler}>Reload</button> </p> </div>
         );
     }
 }
