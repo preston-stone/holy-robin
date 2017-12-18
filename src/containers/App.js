@@ -15,9 +15,7 @@ class App extends Component {
 
     componentDidMount() {
       // fetch Wikipedia data
-        axios.get('https://en.wikipedia.org/w/api.php?format=json&action=query&titles="Holy..."&prop=revisions&rvprop=content&rvsection=2&indexpageids&origin=*
-
-', {
+        axios.get('https://en.wikipedia.org/w/api.php?format=json&action=query&titles=%22Holy...%22&prop=revisions&rvprop=content&rvsection=2&indexpageids&origin=*', {
                 transformResponse: axios.defaults.transformResponse.concat(function(data, headers) {
                   // find and return only the relevant portion of data
                     var pageid = data['query']['pageids'][0];
